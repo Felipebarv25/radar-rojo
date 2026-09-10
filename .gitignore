@@ -1,0 +1,13 @@
+# Secretos: JAMÁS subir esto (las claves van en GitHub Secrets, no en el repo)
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+
+# NOTA: request_budget.json, radar_state.json y data/ SÍ se versionan a propósito.
+# Son el "estado" que GitHub Actions recuerda entre corridas (cupo del día,
+# rojas ya avisadas/seguidas, e histórico de rojas para el backtesting).
