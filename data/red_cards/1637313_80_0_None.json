@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "record_id": "1637313_80_0_None",
+  "detected_at_utc": "2026-09-10T09:12:27.795820+00:00",
+  "fixture": {
+    "id": 1637313,
+    "league": "UEFA Youth League",
+    "country": "World",
+    "home_team": "Barcelona U19",
+    "away_team": "Feyenoord U19"
+  },
+  "red_card": {
+    "minute": 80,
+    "extra": null,
+    "team": "Feyenoord U19",
+    "player": null,
+    "player_id": null,
+    "detail": "Red Card",
+    "position": null
+  },
+  "state_at_red": {
+    "home_goals": 1,
+    "away_goals": 2,
+    "sent_off_team": "Feyenoord U19",
+    "advantaged_team": "Barcelona U19",
+    "stats_available": false,
+    "team_stats": {}
+  },
+  "alert_score": {
+    "score": 49,
+    "stats_available": false,
+    "components": {
+      "time_left": {
+        "value": 0.1,
+        "weight": 0.4285714285714286,
+        "contribution": 4.2857142857142865
+      },
+      "scoreline": {
+        "value": 0.9,
+        "weight": 0.35714285714285715,
+        "contribution": 32.142857142857146
+      },
+      "position": {
+        "value": 0.6,
+        "weight": 0.2142857142857143,
+        "contribution": 12.85714285714286
+      }
+    },
+    "notes": [
+      "posición del expulsado desconocida (peso neutro)",
+      "sin estadísticas de juego: score calculado sin 'momentum'"
+    ]
+  },
+  "outcome": null
+}

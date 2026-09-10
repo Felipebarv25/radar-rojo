@@ -1,23 +1,19 @@
 {
   "seen_reds": {
-    "1490461": [],
-    "1490462": [],
-    "1490464": [
-      "80|0|163200|Red Card"
-    ],
-    "1490465": [],
-    "1636685": [
-      "8|0|108816|Red Card"
+    "1636760": [],
+    "1611755": [],
+    "1637313": [
+      "80|0|L. Haps|Red Card"
     ]
   },
   "following": {
-    "1490464": {
+    "1637313": {
       "red_min": 80,
-      "sent_off": "San Diego",
-      "advantaged": "San Jose Earthquakes",
+      "sent_off": "Feyenoord U19",
+      "advantaged": "Barcelona U19",
       "home_goals_at_red": 1,
-      "away_goals_at_red": 3,
-      "last_followup": 1789014745.9306104
+      "away_goals_at_red": 2,
+      "last_followup": 1789032155.2511113
     }
   }
 }

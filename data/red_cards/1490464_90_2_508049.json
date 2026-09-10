@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "record_id": "1490464_80_0_163200",
-  "detected_at_utc": "2026-09-10T04:32:25.415358+00:00",
+  "record_id": "1490464_90_2_508049",
+  "detected_at_utc": "2026-09-10T04:41:00.773111+00:00",
   "fixture": {
     "id": 1490464,
     "league": "Major League Soccer",
@@ -10,48 +10,48 @@
     "away_team": "San Jose Earthquakes"
   },
   "red_card": {
-    "minute": 80,
-    "extra": null,
-    "team": "San Diego",
-    "player": "Carlos Joaquim dos Santos",
-    "player_id": 163200,
+    "minute": 90,
+    "extra": 2,
+    "team": "San Jose Earthquakes",
+    "player": "Max Floriani",
+    "player_id": 508049,
     "detail": "Red Card",
-    "position": "G"
+    "position": "D"
   },
   "state_at_red": {
-    "home_goals": 1,
+    "home_goals": 2,
     "away_goals": 3,
-    "sent_off_team": "San Diego",
-    "advantaged_team": "San Jose Earthquakes",
+    "sent_off_team": "San Jose Earthquakes",
+    "advantaged_team": "San Diego",
     "stats_available": true,
     "team_stats": {
       "San Diego": {
-        "shots_on": 5.0,
-        "shots_total": 8.0,
+        "shots_on": 6.0,
+        "shots_total": 9.0,
         "corners": 1.0,
-        "possession": 52.0
+        "possession": 53.0
       },
       "San Jose Earthquakes": {
         "shots_on": 6.0,
         "shots_total": 11.0,
         "corners": 3.0,
-        "possession": 48.0
+        "possession": 47.0
       }
     }
   },
   "alert_score": {
-    "score": 46,
+    "score": 51,
     "stats_available": true,
     "components": {
       "time_left": {
-        "value": 0.03333333333333333,
+        "value": 0.0,
         "weight": 0.3,
-        "contribution": 1.0
+        "contribution": 0.0
       },
       "scoreline": {
-        "value": 0.5,
+        "value": 0.9,
         "weight": 0.25,
-        "contribution": 12.5
+        "contribution": 22.5
       },
       "position": {
         "value": 1.0,
@@ -59,22 +59,22 @@
         "contribution": 15.0
       },
       "momentum": {
-        "value": 0.5693402165701335,
+        "value": 0.45526315789473687,
         "weight": 0.3,
-        "contribution": 17.080206497104005
+        "contribution": 13.657894736842104
       }
     },
     "notes": []
   },
   "outcome": {
-    "closed_at_utc": "2026-09-10T09:12:27.062965+00:00",
+    "closed_at_utc": "2026-09-10T09:12:27.062717+00:00",
     "final_status": "FT",
     "final_home_goals": 2,
     "final_away_goals": 3,
     "goals_after_red": {
-      "sent_off_team": 1,
-      "advantaged_team": 0
+      "sent_off_team": 0,
+      "advantaged_team": 1
     },
-    "result_for_sent_off_team": "loss"
+    "result_for_sent_off_team": "win"
   }
 }
