@@ -1,16 +1,16 @@
 name: Radar Rojo (Radar Global)
 
-# Escanea los partidos en vivo. Detección RÁPIDA (cada 5 min) en la franja activa
-# del usuario (11am-5pm Colombia = 16-22 UTC), y espaciada (cada hora) el resto del
-# día. Así la PRIMERA alerta de roja llega en ~5 min en las horas que importan,
-# sin pasarse del cupo gratis (72 + 18 = ~90 requests/día).
-# Nota honesta: el cron de GitHub es "best-effort" — puede retrasarse. ~5 min no es
-# garantizado ni es tiempo real; es "más rápido", no "instantáneo".
+# Escanea los partidos en vivo. Detección cada ~10 min en la franja activa del
+# usuario (11am-medianoche Colombia = 16:00-05:00 UTC, tarde europea + noche
+# americana), y espaciada (cada hora) en la madrugada. Cubrir tarde Y noche no cabe
+# a 5 min en el plan gratis, así que se usan 10 min: 78 + 11 = ~89 requests/día.
+# Nota honesta: el cron de GitHub es "best-effort" — puede retrasarse o tardar en
+# activarse en repos nuevos. ~10 min no es garantizado ni es tiempo real.
 on:
   schedule:
-    - cron: "*/5 16-21 * * *"      # RÁPIDO: cada 5 min, 11am-5pm Colombia
-    - cron: "0 0-15,22,23 * * *"   # resto del día: una vez por hora
-  workflow_dispatch: {}            # permite ejecutarlo a mano desde Actions
+    - cron: "*/10 16-23,0-4 * * *"  # cada 10 min, 11am-medianoche Colombia
+    - cron: "0 5-15 * * *"          # madrugada: una vez por hora
+  workflow_dispatch: {}             # permite ejecutarlo a mano desde Actions
 
 # Evita que dos corridas se pisen (comparten el mismo estado en el repo).
 concurrency:
