@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "record_id": "1490464_80_0_163200",
+  "detected_at_utc": "2026-09-10T04:32:25.415358+00:00",
+  "fixture": {
+    "id": 1490464,
+    "league": "Major League Soccer",
+    "country": "USA",
+    "home_team": "San Diego",
+    "away_team": "San Jose Earthquakes"
+  },
+  "red_card": {
+    "minute": 80,
+    "extra": null,
+    "team": "San Diego",
+    "player": "Carlos Joaquim dos Santos",
+    "player_id": 163200,
+    "detail": "Red Card",
+    "position": "G"
+  },
+  "state_at_red": {
+    "home_goals": 1,
+    "away_goals": 3,
+    "sent_off_team": "San Diego",
+    "advantaged_team": "San Jose Earthquakes",
+    "stats_available": true,
+    "team_stats": {
+      "San Diego": {
+        "shots_on": 5.0,
+        "shots_total": 8.0,
+        "corners": 1.0,
+        "possession": 52.0
+      },
+      "San Jose Earthquakes": {
+        "shots_on": 6.0,
+        "shots_total": 11.0,
+        "corners": 3.0,
+        "possession": 48.0
+      }
+    }
+  },
+  "alert_score": {
+    "score": 46,
+    "stats_available": true,
+    "components": {
+      "time_left": {
+        "value": 0.03333333333333333,
+        "weight": 0.3,
+        "contribution": 1.0
+      },
+      "scoreline": {
+        "value": 0.5,
+        "weight": 0.25,
+        "contribution": 12.5
+      },
+      "position": {
+        "value": 1.0,
+        "weight": 0.15,
+        "contribution": 15.0
+      },
+      "momentum": {
+        "value": 0.5693402165701335,
+        "weight": 0.3,
+        "contribution": 17.080206497104005
+      }
+    },
+    "notes": []
+  },
+  "outcome": null
+}
