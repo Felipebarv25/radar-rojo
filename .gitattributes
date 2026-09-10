@@ -1,0 +1,4 @@
+# Los scripts y archivos que corren en el servidor Linux DEBEN usar saltos de línea
+# LF (no CRLF de Windows), o fallan al ejecutarse.
+*.sh text eol=lf
+*.service text eol=lf
