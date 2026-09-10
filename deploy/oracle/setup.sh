@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Instala y arranca Radar Rojo como servicio 24/7 en el servidor Oracle (Ubuntu).
+# Correr DENTRO del servidor, desde la carpeta del proyecto: bash deploy/oracle/setup.sh
+set -e
+
+echo "==> Instalando Python y dependencias del sistema..."
+sudo apt-get update -y
+sudo apt-get install -y python3 python3-venv python3-pip git
+
+cd "$(dirname "$0")/../.."   # ir a la raíz del proyecto
+PROJ="$(pwd)"
+echo "==> Proyecto en: $PROJ"
+
+if [ ! -f .env ]; then
+  echo "ERROR: falta el archivo .env con tus claves."
+  echo "Créalo con: cp .env.example .env  y luego edítalo (nano .env)."
+  exit 1
+fi
+
+echo "==> Entorno virtual e instalación de librerías..."
+python3 -m venv .venv
+.venv/bin/pip install --upgrade pip >/dev/null
+.venv/bin/pip install -r requirements.txt
+
+echo "==> Instalando el servicio systemd (24/7, se reinicia solo)..."
+sudo cp deploy/oracle/radar-rojo.service /etc/systemd/system/radar-rojo.service
+sudo systemctl daemon-reload
+sudo systemctl enable radar-rojo
+sudo systemctl restart radar-rojo
+
+sleep 3
+echo "==> Estado del servicio:"
+sudo systemctl status radar-rojo --no-pager || true
+echo ""
+echo "Listo. Ver logs en vivo:  journalctl -u radar-rojo -f"

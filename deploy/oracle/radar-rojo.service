@@ -1,0 +1,15 @@
+[Unit]
+Description=Radar Rojo - Radar Global 24/7
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/radar-rojo
+ExecStart=/home/ubuntu/radar-rojo/.venv/bin/python run_radar.py --no-startup
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

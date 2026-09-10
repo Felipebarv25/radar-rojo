@@ -18,9 +18,12 @@ API_FOOTBALL_BASE_URL = os.getenv(
 ).strip().rstrip("/")
 
 POLL_INTERVAL_SECONDS = int(os.getenv("POLL_INTERVAL_SECONDS", "75"))
-# Radar Global: escanea TODOS los partidos en vivo con 1 request por ciclo.
-# 15 min (900s) -> ~96 requests/día si corre 24h; el guardián de cupo protege.
-GLOBAL_POLL_INTERVAL_SECONDS = int(os.getenv("GLOBAL_POLL_INTERVAL_SECONDS", "900"))
+# Radar Global ADAPTATIVO (para el servidor 24/7):
+# - Si HAY partidos en vivo: escanea cada GLOBAL_POLL_INTERVAL_SECONDS (activo).
+# - Si NO hay partidos: descansa IDLE_POLL_INTERVAL_SECONDS (ahorra cupo).
+# Así concentra las ~95 requests/día en las horas con fútbol, a cualquier hora.
+GLOBAL_POLL_INTERVAL_SECONDS = int(os.getenv("GLOBAL_POLL_INTERVAL_SECONDS", "600"))
+IDLE_POLL_INTERVAL_SECONDS = int(os.getenv("IDLE_POLL_INTERVAL_SECONDS", "1800"))
 MAX_REQUESTS_PER_DAY = int(os.getenv("MAX_REQUESTS_PER_DAY", "95"))
 
 
