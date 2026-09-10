@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "record_id": "1549583_52_0_None",
+  "detected_at_utc": "2026-09-10T23:12:05.684934+00:00",
+  "fixture": {
+    "id": 1549583,
+    "league": "Primera B",
+    "country": "Colombia",
+    "home_team": "Orsomarso",
+    "away_team": "Tigres FC"
+  },
+  "red_card": {
+    "minute": 52,
+    "extra": null,
+    "team": "Tigres FC",
+    "player": null,
+    "player_id": null,
+    "detail": "Red Card",
+    "position": null
+  },
+  "state_at_red": {
+    "home_goals": 0,
+    "away_goals": 2,
+    "sent_off_team": "Tigres FC",
+    "advantaged_team": "Orsomarso",
+    "stats_available": false,
+    "team_stats": {}
+  },
+  "alert_score": {
+    "score": 51,
+    "stats_available": false,
+    "components": {
+      "time_left": {
+        "value": 0.4,
+        "weight": 0.4285714285714286,
+        "contribution": 17.142857142857146
+      },
+      "scoreline": {
+        "value": 0.6,
+        "weight": 0.35714285714285715,
+        "contribution": 21.428571428571427
+      },
+      "position": {
+        "value": 0.6,
+        "weight": 0.2142857142857143,
+        "contribution": 12.85714285714286
+      }
+    },
+    "notes": [
+      "posición del expulsado desconocida (peso neutro)",
+      "sin estadísticas de juego: score calculado sin 'momentum'"
+    ]
+  },
+  "outcome": null
+}
