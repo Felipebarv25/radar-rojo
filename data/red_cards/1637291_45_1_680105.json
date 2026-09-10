@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "record_id": "1637291_45_1_680105",
+  "detected_at_utc": "2026-09-10T14:02:41.598574+00:00",
+  "fixture": {
+    "id": 1637291,
+    "league": "World Cup - U20 - Women",
+    "country": "World",
+    "home_team": "Korea DPR U20 W",
+    "away_team": "Costa Rica U20 W"
+  },
+  "red_card": {
+    "minute": 45,
+    "extra": 1,
+    "team": "Costa Rica U20 W",
+    "player": "S. Pitty",
+    "player_id": 680105,
+    "detail": "Red Card",
+    "position": null
+  },
+  "state_at_red": {
+    "home_goals": 1,
+    "away_goals": 0,
+    "sent_off_team": "Costa Rica U20 W",
+    "advantaged_team": "Korea DPR U20 W",
+    "stats_available": false,
+    "team_stats": {}
+  },
+  "alert_score": {
+    "score": 63,
+    "stats_available": false,
+    "components": {
+      "time_left": {
+        "value": 0.5,
+        "weight": 0.4285714285714286,
+        "contribution": 21.42857142857143
+      },
+      "scoreline": {
+        "value": 0.8,
+        "weight": 0.35714285714285715,
+        "contribution": 28.571428571428577
+      },
+      "position": {
+        "value": 0.6,
+        "weight": 0.2142857142857143,
+        "contribution": 12.85714285714286
+      }
+    },
+    "notes": [
+      "posición del expulsado desconocida (peso neutro)",
+      "sin estadísticas de juego: score calculado sin 'momentum'"
+    ]
+  },
+  "outcome": null
+}
