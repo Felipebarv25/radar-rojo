@@ -1,23 +1,21 @@
 {
   "seen_reds": {
-    "1490461": [],
-    "1490462": [],
     "1490464": [
-      "80|0|163200|Red Card"
+      "80|0|163200|Red Card",
+      "90|2|508049|Red Card"
     ],
-    "1490465": [],
     "1636685": [
       "8|0|108816|Red Card"
     ]
   },
   "following": {
     "1490464": {
-      "red_min": 80,
-      "sent_off": "San Diego",
-      "advantaged": "San Jose Earthquakes",
-      "home_goals_at_red": 1,
+      "red_min": 90,
+      "sent_off": "San Jose Earthquakes",
+      "advantaged": "San Diego",
+      "home_goals_at_red": 2,
       "away_goals_at_red": 3,
-      "last_followup": 1789014745.9306104
+      "last_followup": 1789015261.2978594
     }
   }
 }
