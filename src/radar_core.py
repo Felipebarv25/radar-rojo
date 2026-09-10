@@ -9,6 +9,7 @@ para que en la nube se pueda guardar entre corridas. Todo se recalcula desde
 /fixtures?live=all, que trae el estado completo de cada partido en cada escaneo.
 """
 import sys
+import time
 
 import config
 import request_budget
@@ -18,6 +19,9 @@ from src.formatter import format_followup, format_red_card
 from src.red_card_detector import is_red_card
 
 ENRICH_MIN_REMAINING = 15  # solo pedir stats de la roja si quedan más de N requests
+# Los seguimientos van cada ~15 min AUNQUE la detección escanee más seguido (ej. 5
+# min). Así la primera alerta llega rápido, pero no te spamea el seguimiento.
+MIN_FOLLOWUP_INTERVAL_SECONDS = 840  # 14 min (margen bajo 15)
 
 
 def red_key(ev) -> str:
@@ -39,7 +43,11 @@ def _handle_followup(source, notifier, fid, st, live_by_id) -> bool:
     """
     snap = live_by_id.get(fid)
     finished = snap is None
-    if finished:
+    if not finished:
+        # Aún en vivo: solo mandamos seguimiento si ya pasaron ~15 min del último.
+        if time.time() - st.get("last_followup", 0) < MIN_FOLLOWUP_INTERVAL_SECONDS:
+            return False
+    else:
         if not request_budget.can_spend(config.MAX_REQUESTS_PER_DAY):
             return True  # sin cupo: lo deja; close_pending.py lo cierra luego
         try:
@@ -63,6 +71,8 @@ def _handle_followup(source, notifier, fid, st, live_by_id) -> bool:
         snap, st["red_min"], st["sent_off"], st["advantaged"],
         goals_adv_after, goals_sent_after, finished,
     ))
+    if not finished:
+        st["last_followup"] = time.time()
     return finished
 
 
@@ -111,6 +121,7 @@ def run_one_cycle(source, notifier, state, prime_only=False) -> dict:
                 "advantaged": snap.opponent_of(ev.team),
                 "home_goals_at_red": snap.home_goals or 0,
                 "away_goals_at_red": snap.away_goals or 0,
+                "last_followup": time.time(),  # 1er seguimiento ~15 min después
             }
             alerts += 1
 
