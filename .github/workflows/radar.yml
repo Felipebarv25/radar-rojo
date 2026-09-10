@@ -50,3 +50,5 @@ jobs:
             git commit -m "state: $(date -u +%FT%TZ)"
             git push
           fi
+
+# (re-registro del workflow)
