@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "record_id": "1509180_87_0_24639",
+  "detected_at_utc": "2026-09-10T18:49:30.691256+00:00",
+  "fixture": {
+    "id": 1509180,
+    "league": "Erovnuli Liga",
+    "country": "Georgia",
+    "home_team": "Gagra",
+    "away_team": "Torpedo Kutaisi"
+  },
+  "red_card": {
+    "minute": 87,
+    "extra": null,
+    "team": "Gagra",
+    "player": "Mate Tsintsadze",
+    "player_id": 24639,
+    "detail": "Red Card",
+    "position": "M"
+  },
+  "state_at_red": {
+    "home_goals": 1,
+    "away_goals": 1,
+    "sent_off_team": "Gagra",
+    "advantaged_team": "Torpedo Kutaisi",
+    "stats_available": true,
+    "team_stats": {
+      "Gagra": {
+        "possession": 54.0,
+        "shots_on": 5.0,
+        "corners": 7.0,
+        "shots_total": 13.0
+      },
+      "Torpedo Kutaisi": {
+        "possession": 46.0,
+        "shots_on": 4.0,
+        "corners": 4.0,
+        "shots_total": 7.0
+      }
+    }
+  },
+  "alert_score": {
+    "score": 46,
+    "stats_available": true,
+    "components": {
+      "time_left": {
+        "value": 0.0,
+        "weight": 0.3,
+        "contribution": 0.0
+      },
+      "scoreline": {
+        "value": 1.0,
+        "weight": 0.25,
+        "contribution": 25.0
+      },
+      "position": {
+        "value": 0.6,
+        "weight": 0.15,
+        "contribution": 9.0
+      },
+      "momentum": {
+        "value": 0.4109250398724083,
+        "weight": 0.3,
+        "contribution": 12.32775119617225
+      }
+    },
+    "notes": []
+  },
+  "outcome": null
+}

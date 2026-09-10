@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "record_id": "1612006_44_0_None",
+  "detected_at_utc": "2026-09-10T18:49:31.263908+00:00",
+  "fixture": {
+    "id": 1612006,
+    "league": "Reserve League",
+    "country": "Argentina",
+    "home_team": "Estudiantes La Plata Res",
+    "away_team": "Huracán Res."
+  },
+  "red_card": {
+    "minute": 44,
+    "extra": null,
+    "team": "Estudiantes La Plata Res",
+    "player": null,
+    "player_id": null,
+    "detail": "Red Card",
+    "position": null
+  },
+  "state_at_red": {
+    "home_goals": 1,
+    "away_goals": 0,
+    "sent_off_team": "Estudiantes La Plata Res",
+    "advantaged_team": "Huracán Res.",
+    "stats_available": false,
+    "team_stats": {}
+  },
+  "alert_score": {
+    "score": 66,
+    "stats_available": false,
+    "components": {
+      "time_left": {
+        "value": 0.5,
+        "weight": 0.4285714285714286,
+        "contribution": 21.42857142857143
+      },
+      "scoreline": {
+        "value": 0.9,
+        "weight": 0.35714285714285715,
+        "contribution": 32.142857142857146
+      },
+      "position": {
+        "value": 0.6,
+        "weight": 0.2142857142857143,
+        "contribution": 12.85714285714286
+      }
+    },
+    "notes": [
+      "posición del expulsado desconocida (peso neutro)",
+      "sin estadísticas de juego: score calculado sin 'momentum'"
+    ]
+  },
+  "outcome": null
+}
