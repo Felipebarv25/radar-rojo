@@ -51,5 +51,15 @@
       "sin estadísticas de juego: score calculado sin 'momentum'"
     ]
   },
-  "outcome": null
+  "outcome": {
+    "closed_at_utc": "2026-09-11T01:07:35.857259+00:00",
+    "final_status": "FT",
+    "final_home_goals": 0,
+    "final_away_goals": 2,
+    "goals_after_red": {
+      "sent_off_team": 0,
+      "advantaged_team": 0
+    },
+    "result_for_sent_off_team": "win"
+  }
 }
